@@ -6,6 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: semgrep/action@v1
-        with:
-          config: "p/default"
+      - name: Install & Run Semgrep
+        run: |
+          python3 -m pip install semgrep
+          semgrep scan --config="p/default"
