@@ -6,6 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: semgrep/semgrep-action@v1
+      - uses: semgrep/action@v1
         with:
           config: "p/default"
